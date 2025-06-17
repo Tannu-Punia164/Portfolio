@@ -1,11 +1,13 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
-
+import project1 from "@/assets/project1.png";
+import project2 from "@/assets/project2.png";
+import project3 from "@/assets/project3.png";
 const projects = [
   {
     id: 1,
     title: "Doctor Appointment Website",
     description: "A web-based appointment scheduling system with dedicated portals for admins, doctors, and patients to efficiently manage medical bookings and interactions.",
-    image: "",
+    image: project1,
     tags: ["MERN", "TailwindCSS", "Postman"],
     demoUrl: "https://prescripto-hm-system.vercel.app/",
     githubUrl: "https://github.com/Tannu-Punia164/CarePulse_HM_system",
@@ -15,7 +17,7 @@ const projects = [
     title: "Expense Tracker WebApp",
     description:
       "A responsive web application for tracking and managing personal expenses with real-time summaries and categorized insights.",
-    image: "/projects/project2.png",
+    image: project3,
     tags: ["JavaScript", "TailwindCSS", "Next.js"],
     demoUrl: "#",
     githubUrl: "#",
@@ -25,10 +27,10 @@ const projects = [
     title: "Portfolio",
     description:
       "A personal portfolio website showcasing projects, skills, and experiences with a modern, responsive design.",
-    image: "/projects/project3.png",
+    image: project2,
     tags: ["TailwindCSS", "Node.js", "JavaScript"],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "https://myportfolio-one-psi-68.vercel.app/",
+    githubUrl: "https://github.com/Tannu-Punia164/Portfolio",
   },
 ];
 
