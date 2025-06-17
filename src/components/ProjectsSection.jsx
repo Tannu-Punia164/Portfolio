@@ -3,30 +3,30 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
-    demoUrl: "#",
-    githubUrl: "#",
+    title: "Doctor Appointment Website",
+    description: "A web-based appointment scheduling system with dedicated portals for admins, doctors, and patients to efficiently manage medical bookings and interactions.",
+    image: "",
+    tags: ["MERN", "TailwindCSS", "Postman"],
+    demoUrl: "https://prescripto-hm-system.vercel.app/",
+    githubUrl: "https://github.com/Tannu-Punia164/CarePulse_HM_system",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "Expense Tracker WebApp",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
+      "A responsive web application for tracking and managing personal expenses with real-time summaries and categorized insights.",
     image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+    tags: ["JavaScript", "TailwindCSS", "Next.js"],
     demoUrl: "#",
     githubUrl: "#",
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Portfolio",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
+      "A personal portfolio website showcasing projects, skills, and experiences with a modern, responsive design.",
     image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+    tags: ["TailwindCSS", "Node.js", "JavaScript"],
     demoUrl: "#",
     githubUrl: "#",
   },
@@ -46,11 +46,12 @@ export const ProjectsSection = () => {
           crafted with attention to detail, performance, and user experience.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {projects.map((project, key) => (
             <div
               key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              className="group bg-card rounded-lg   transition-shadow duration-300 hover:shadow-[0_0_25px_10px_rgba(255,255,255,0.4)] "
+              
             >
               <div className="h-48 overflow-hidden">
                 <img

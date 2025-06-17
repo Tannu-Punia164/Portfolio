@@ -14,12 +14,10 @@ const skills = [
   { name: "Node.js", level: 80, category: "backend" },
   { name: "Express", level: 75, category: "backend" },
   { name: "MongoDB", level: 70, category: "backend" },
-  { name: "PostgreSQL", level: 65, category: "backend" },
-  { name: "GraphQL", level: 60, category: "backend" },
+  
 
   // Tools
   { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "Docker", level: 70, category: "tools" },
   { name: "Figma", level: 85, category: "tools" },
   { name: "VS Code", level: 95, category: "tools" },
 ];
@@ -42,17 +40,17 @@ export const SkillsSection = () => {
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category, key) => (
             <button
-              key={key}
-              onClick={() => setActiveCategory(category)}
-              className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
-                activeCategory === category
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-forefround hover:bd-secondary"
-              )}
-            >
-              {category}
-            </button>
+  key={key}
+  onClick={() => setActiveCategory(category)}
+  className={cn(
+    "px-5 py-2 rounded-full transition-all duration-300 capitalize", // Removed relative and overflow-hidden as they're not strictly necessary for this effect
+    activeCategory === category
+      ? "bg-primary text-primary-foreground" // No shadow for the active state by default, keep it clean
+      : "bg-secondary/70 text-forefround hover:bg-secondary hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.5)]" // Removed 'inset' here
+  )}
+>
+  {category}
+</button>
           ))}
         </div>
 
@@ -60,7 +58,7 @@ export const SkillsSection = () => {
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
+              className="bg-card p-6 rounded-lg shadow-xs card-hover "
             >
               <div className="text-left mb-4">
                 <h3 className="font-semibold text-lg"> {skill.name}</h3>
