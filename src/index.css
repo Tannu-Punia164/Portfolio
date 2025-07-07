@@ -170,3 +170,108 @@
   }
 }
 
+/* === Light Theme Background Animations === */
+/* Add these to your existing @theme block */
+@theme {
+  /* Your existing theme tokens... */
+  --animate-geometric-float: geometric-float 6s ease-in-out infinite;
+  --animate-geometric-rotate: geometric-rotate 12s linear infinite;
+  --animate-light-float: light-float 10s ease-in-out infinite;
+  --animate-light-pulse: light-pulse 8s ease-in-out infinite;
+}
+
+/* === Light Theme Utilities === */
+/* Add these to your existing @layer utilities block */
+@layer utilities {
+  /* Your existing utilities... */
+  
+  .light-geometric-star {
+    animation: var(--animate-geometric-float), var(--animate-geometric-rotate);
+  }
+  
+  .light-star-purple {
+    fill: hsl(258 90% 66%);
+    stroke: hsl(258 90% 76%);
+    stroke-width: 0.5;
+    filter: drop-shadow(0 0 4px hsla(258, 90%, 66%, 0.3));
+  }
+  
+  .light-star-blue {
+    fill: hsl(213 94% 68%);
+    stroke: hsl(213 94% 78%);
+    stroke-width: 0.5;
+    filter: drop-shadow(0 0 4px hsla(213, 94%, 68%, 0.3));
+  }
+  
+  .light-diamond-purple {
+    background-color: hsl(258 90% 66%);
+    box-shadow: 0 0 6px hsla(258, 90%, 66%, 0.4);
+  }
+  
+  .light-diamond-blue {
+    background-color: hsl(213 94% 68%);
+    box-shadow: 0 0 6px hsla(213, 94%, 68%, 0.4);
+  }
+  
+  .light-floating-particle {
+    background-color: hsl(var(--primary));
+    animation: var(--animate-light-float), var(--animate-light-pulse);
+    box-shadow: 0 0 4px hsla(var(--primary), 0.4);
+  }
+}
+
+/* === Light Theme Animations === */
+/* Add these to your existing animations section */
+@keyframes geometric-float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  25% {
+    transform: translateY(-8px) scale(1.05);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.02);
+  }
+  75% {
+    transform: translateY(4px) scale(0.98);
+  }
+}
+
+@keyframes geometric-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes light-float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(8px, -12px);
+  }
+  40% {
+    transform: translate(-6px, -8px);
+  }
+  60% {
+    transform: translate(10px, 6px);
+  }
+  80% {
+    transform: translate(-4px, 10px);
+  }
+}
+
+@keyframes light-pulse {
+  0%, 100% {
+    opacity: 0.05;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.1);
+  }
+}
+
