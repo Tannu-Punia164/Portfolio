@@ -2,6 +2,7 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import project1 from "@/assets/project1.png";
 import project2 from "@/assets/project2.png";
 import project3 from "@/assets/project3.png";
+import project4 from "@/assets/project4.png";
 const projects = [
   {
     id: 1,
@@ -31,6 +32,16 @@ const projects = [
     tags: ["TailwindCSS", "Node.js", "JavaScript"],
     demoUrl: "https://myportfolio-one-psi-68.vercel.app/",
     githubUrl: "https://github.com/Tannu-Punia164/Portfolio",
+  },
+  {
+    id: 4,
+    title: "Q&A WebApp",
+    description:
+      "AI-powered news Q&A assistant that analyzes multiple articles simultaneously and provides instant answers using advanced NLP and semantic search technology. ",
+    image: project4,
+    tags: ["Streamlit", "Python", "FAISS","Transformers"],
+    demoUrl: "https://genai--q-agit-hsw9f3aqycvw9giuybp6wg.streamlit.app/",
+    githubUrl: "https://github.com/Tannu-Punia164/GENAI--Q-A",
   },
 ];
 
