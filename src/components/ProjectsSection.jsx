@@ -3,6 +3,7 @@ import project1 from "@/assets/project1.png";
 import project2 from "@/assets/project2.png";
 import project3 from "@/assets/project3.png";
 import project4 from "@/assets/project4.png";
+import project5 from "@/assets/project5.png";
 const projects = [
   {
     id: 1,
@@ -42,6 +43,17 @@ const projects = [
     tags: ["Streamlit", "Python", "FAISS","Transformers"],
     demoUrl: "https://genai--q-agit-hsw9f3aqycvw9giuybp6wg.streamlit.app/",
     githubUrl: "https://github.com/Tannu-Punia164/GENAI--Q-A",
+  },
+
+  {
+    id: 5,
+    title: "Code Snippet Manager",
+    description:
+      "A full-stack web application for developers to organize, search, and manage their code snippets with advanced filtering, tagging, and sharing capabilities. Features secure user authentication, real-time search, syntax highlighting, and comprehensive CRUD operations for efficient code snippet management.",
+    image: project5,
+    tags: ["React.js", "JavaScipt(ES6+)", "MongoDB","Node.js"],
+    demoUrl: "https://code-snippet-manager-zeta.vercel.app/",
+    githubUrl: "https://github.com/Tannu-Punia164/CODE_SNIPPET_MANAGER",
   },
 ];
 
